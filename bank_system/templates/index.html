@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Bank Loan Management System</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0fc314e.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <h1>Bank Loan Management System</h1>
+
+  <div class="container">
+    <!-- LEND FORM -->
+    <section class="card">
+      <h2><i class="fas fa-hand-holding-usd"></i> Lend Money</h2>
+      <form id="lend-form">
+        <input type="text" name="bank_name" placeholder="Bank Name" required />
+        <input type="text" name="customer_name" placeholder="Customer Name" required />
+        <input type="number" name="principal" placeholder="Principal Amount" required />
+        <input type="number" name="years" placeholder="Loan Period (Years)" required />
+        <input type="number" name="rate" placeholder="Interest Rate (%)" required />
+        <button type="submit">LEND</button>
+      </form>
+      <div id="lend-response" class="response-box"></div>
+    </section>
+
+    <!-- PAYMENT FORM -->
+    <section class="card">
+      <h2><i class="fas fa-money-check-alt"></i> Make Payment</h2>
+      <form id="payment-form">
+        <input type="text" name="bank_name" placeholder="Bank Name" required />
+        <input type="text" name="customer_name" placeholder="Customer Name" required />
+        <input type="number" name="loan_id" placeholder="Loan ID" required />
+        <input type="number" name="lump_sum_amount" placeholder="Lump Sum Amount" required />
+        <input type="number" name="emi_no" placeholder="EMI Number" required />
+        <button type="submit">PAY</button>
+      </form>
+      <div id="payment-response" class="response-box"></div>
+    </section>
+
+    <!-- LEDGER FORM -->
+    <section class="card">
+      <h2><i class="fas fa-balance-scale"></i> Check Balance</h2>
+      <form id="ledger-form">
+        <input type="text" name="bank_name" placeholder="Bank Name" required />
+        <input type="text" name="customer_name" placeholder="Customer Name" required />
+        <input type="number" name="loan_id" placeholder="Loan ID" required />
+        <button type="submit">CHECK BALANCE</button>
+      </form>
+      <div id="ledger-response" class="response-box"></div>
+    </section>
+
+    <!-- OVERVIEW FORM -->
+    <section class="card">
+      <h2><i class="fas fa-chart-line"></i> Account Overview</h2>
+      <form id="overview-form">
+        <input type="text" name="bank_name" placeholder="Bank Name" required />
+        <input type="text" name="customer_name" placeholder="Customer Name" required />
+        <button type="submit">View Overview</button>
+      </form>
+      <div id="overview-response" class="response-box"></div>
+    </section>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+
+</html>

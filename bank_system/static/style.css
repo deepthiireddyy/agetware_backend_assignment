@@ -1,0 +1,130 @@
+body {
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  background: linear-gradient(120deg, #eef2f3, #f8fbfc);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #1e2a38;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 380px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #0077cc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccd6dd;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0077cc;
+}
+
+button {
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.response-box {
+  margin-top: 12px;
+  padding: 10px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.response-box.success {
+  background-color: #e0f7e9;
+  border: 1px solid #42ba96;
+  color: #276749;
+}
+
+.response-box.error {
+  background-color: #ffe4e1;
+  border: 1px solid #e57373;
+  color: #c62828;
+}
+
+.overview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.center-overview {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
